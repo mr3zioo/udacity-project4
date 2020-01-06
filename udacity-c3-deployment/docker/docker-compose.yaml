@@ -1,7 +1,7 @@
 version: "3"
 services:
   reverseproxy:
-#      image: abdulmohsen91/reverseproxy
+
     image: mr3zioo/udacity-c3-reverse-proxy:v1.0
     ports:
       - 8080:8080
@@ -10,7 +10,7 @@ services:
       - backend-user
       - backend-feed     
   backend-user:
-#    image: abdulmohsen91/udacity-restapi-user
+
     image: mr3zioo/udacity-c3-restapi-user:v1.0
     environment:
       POSTGRESS_USERNAME: $POSTGRESS_USERNAME
@@ -23,7 +23,7 @@ services:
       JWT_SECRET: $JWT_SECRET
       URL: "http://localhost:8100"
   backend-feed:
-#    image: abdulmohsen91/udacity-restapi-feed
+
     image: mr3zioo/udacity-c3-restapi-feed:v1.0
     volumes:
       - $HOME/.aws:/root/.aws
@@ -38,7 +38,7 @@ services:
       JWT_SECRET: $JWT_SECRET
       URL: "http://0.0.0.0:8100"
   frontend:
-#    image: abdulmohsen91/udacity-frontend:local
+
     image: mr3zioo/udacity-c3-frontend:v1.0
     ports:
       - "8100:80"

@@ -3,20 +3,20 @@ services:
   reverseproxy:
     build:
       context: .
-#    image: abdulmohsen91/reverseproxy 
+
     image: mr3zioo/udacity-c3-reverse-proxy
   backend_user:
     build:
       context: ../../udacity-c3-restapi-user
-#    image: abdulmohsen91/udacity-restapi-user
+
     image: mr3zioo/udacity-c3-restapi-user  
   backend_feed:
     build:
       context: ../../udacity-c3-restapi-feed  
-#    image: abdulmohsen91/udacity-restapi-feed
+
     image: mr3zioo/udacity-c3-restapi-feed
   frontend:
     build:
       context: ../../udacity-c3-frontend  
-#    image: abdulmohsen91/udacity-frontend:local
+
     image: mr3zioo/udacity-c3-frontend
