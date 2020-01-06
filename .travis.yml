@@ -20,7 +20,7 @@ before_install:
 install:
   - docker login --username=mr3zioo --password=VMware1!da
 #  - docker login --username='${DOCKER_USER}'  --password='${DOCKER_PWD}'
-  - docker-compose -f course-03/udacity-c3-deployment/docker/docker-compose-build.yaml build --parallel 
-  - docker-compose -f course-03/udacity-c3-deployment/docker/docker-compose-build.yaml push
-  - cd course-03/udacity-c3-deployment/docker/
+  - docker-compose -f udacity-c3-deployment/docker/docker-compose-build.yaml build --parallel 
+  - docker-compose -f udacity-c3-deployment/docker/docker-compose-build.yaml push
+  - cd udacity-c3-deployment/docker/
 #  - docker-compose up
